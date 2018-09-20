@@ -78,7 +78,7 @@ app.post('/search/data', function(req, res){
           }
         
           // reducing redundancey
-          response = _.uniqBy(response, 'id');
+          response = _.uniqBy(response, '_id');
         
           // in case no filtering has been applied, respond with all houses
           if(Object.keys(req.body).length === 0 && response.length === 0){
